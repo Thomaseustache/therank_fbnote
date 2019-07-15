@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Rank | Get ranked anonymously by your friends</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/favico.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
+    <meta property="og:url"           content="https://www.therank.me" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="The Rank" />
+    <meta property="og:description"   content="Get ranked anonymously by your friends and show how much you are handsome" />
+    <meta property="og:image"         content="https://www.therank.me/img/fb-cover.png" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123805554-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123805554-1');
+    </script>
+
+
+  </head>
+
+
+  <body>
+
+    <div class="loader"></div>
+    <div class="overlay"></div>
+
+    <div class="notifs">
+      <span class="notif-icon"><i>0</i></span>
+      <div class="notifs-list">
+        <p class="nonotifs">You have no notifications.</p>
+        <ul>      
+        </ul>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <h1 class="logo">The Rank</h1>
+      <ul class="main-nav">
+        <!--<li><a href="#top-table" class="popSection" section="top-table">Top table</a></li>-->
+        <li><a href="#rank-system" class="popSection" section="rank-system">Rank people</a></li>
+        <li><a href="#my-profil" class="popSection" section="my-profile">My profil</a></li>
+      </ul>
+    </header>
+
+    <div class="alert-popup shop">
+      <div class="shop-icon"><img src="" /></div>
+      <p>Do you want to buy this icon for <b><i class="shop-price">50</i> credits</b></p>
+      <a href="" class="btn btn-blue shop-ok">Buy it!</a>
+      <a href="" class="btn btn-grey shop-cancel">Cancel</a>
+    </div>
+
+    <section class="intro">
+      <div class="section-wrapper">
+
+        <h2 class="big_title">get ranked <i>anonymously</i> by your friends <span>and show how much you are handsome</span></h2>
+        <img src="img/prev.png" alt="rank your friends and people"/>
+
+        <p class="big_title">Get started</p>
+        <a href="#" class="fb_connect">Connect with facebook</a>
+
+      </div>
+    </section>
+
+    <section class="top-table">
+      <div class="section-wrapper">
+
+        <h2 class="big_title">TOP TABLE</h2>
+
+        <div class="table-rank">
+          <table>
+          <thead>
+            <th>#</th>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Note</th>
+            <th>Elo</th>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="share-profile">
+      <div class="section-wrapper">
+
+        <h2 class="big_title">share your profile<span>to start ranking friends</span></h2>
+
+        <div class="friends-ranked">
+          <p><b>0 friend</b> already ranked!</p>
+          <ul class="friends-overlook">
+          </ul>
+        </div>
+
+        <div class="picture_frame">
+          <div class="picture-border changePicture"><img src="img/loader.gif" alt="pic" /></div>
+        </div>
+        <p>Choose a photo <b>without sunglass or hat</b> for better result</p>
+        
+
+        <div class="btn-action-group">
+          <p><a href="#" class="btn btn-grey changePicture">Change photo</a></p>
+          <p><a href="#" class="btn btn-blue sharer">Share &amp; get rank</a></p>
+        </div>
+        <input name="file" type="file"
+         class="file-upload" id="fileElem" style="display: none;" accept="image/*" onchange="handleFiles(this.files)"/>
+
+
+        <div class="btn-settings-group">
+          <p><label><input type="checkbox" id="public"/><b>Allow everyone</b> to rate you</label></p>
+          <!--<p><label><input type="checkbox" id="notify" /><b>Get notify by email</b> when someone rated you</label></p>-->
+        </div>
+        
+        
+        <div class="popin change-photo-container">
+          <ul class="grid-photo">
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="my-profile">
+      <div class="section-wrapper">
+
+        <h2 class="big_title">My profile</span></h2>
+
+        <div class="alert-box">
+          <p>TO UNLOCK YOUR RANK,<span><b>RATE AT LEAST <i>5</i> PEOPLE</b><span></p>
+          <p><a href="#" class="btn btn-blue popSection" section="rank-system">Rate people</a></p>
+        </div>
+
+        <div class="picture_frame">
+          <div class="picture-border changePicture"><img class="my-profile-pic" src="img/loader.gif" alt="pic" /></div>
+          <div class="picture-rank"></div>
+        </div>
+        
+        <p class="ranking-text unblocked">Your rank is <b class="text-rank">blocked</b> ! <span>Average from <b class="nb-rates"></b> reviews</span></p>
+        <p class="ranking-text blocked">You have not enough vote for view your rank!</p>
+
+        <div class="rank-history">
+          <h3>People who rates me</h3>
+
+          <div class="container-rank-history">
+            <!--<p class="intro-rank-history"> <span>13 x<img src="img/emots/fire.png" /></span><span>4 x<img src="img/emots/smile.png" /></span></p>-->
+            <ul>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="btn-action-group">
+          <p><a href="#" class="btn btn-grey popSection" section="share-profile">Settings</a></p>
+          <p><a href="#" class="btn btn-blue sharer">Share &amp; get rank</a></p>
+        </div>
+
+        <div class="emots-bag">
+          <h3>Your emots bag</h3>
+          <p class="credits"> <i class="ico-coin">c</i><b>0</b> credits</p>
+          <ul>
+            <li><img src="img/emots/thumbs-up.png" /></li>
+            <li><img src="img/emots/smile.png" /></li>
+            <li><img src="img/emots/heart.png" /></li>
+            <li class="locked"><img src="img/emots/fist.png" /></li>
+            <li class="locked"><img src="img/emots/ok.png" /></li>
+            <li class="locked"><img src="img/emots/smile-heart.png" /></li>
+            <li class="locked"><img src="img/emots/poo.png" /></li>
+            <li class="locked"><img src="img/emots/flower.png" /></li>
+            <li class="locked"><img src="img/emots/fire.png" /></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    
+    <section class="rank-system">
+      <div class="section-wrapper">
+
+        <h2 class="big_title">Rank people</span></h2>
+
+        <div class="picture_frame">
+          <div class="picture-border"><img class="picture_frame-img" src="img/loader.gif" alt="pic" /></div>
+          <div class="picture-rank rank-input">
+            <input type="number" min="0" max="20" value="10" />
+          </div>
+          <div class="picture-emots">
+            <div class="emots-rank"><img src="img/plus.png"/></div>
+            <input type="number" class="emots-rank-input" value="0" />
+            <div class="emots-bag">
+              <ul>
+                <li><img src="img/emots/thumbs-up.png" /></li>
+                <li><img src="img/emots/smile.png" /></li>
+                <li><img src="img/emots/heart.png" /></li>
+                <li class="locked"><img src="img/emots/fist.png" /></li>
+                <li class="locked"><img src="img/emots/ok.png" /></li>
+                <li class="locked"><img src="img/emots/smile-heart.png" /></li>
+                <li class="locked"><img src="img/emots/poo.png" /></li>
+                <li class="locked"><img src="img/emots/flower.png" /></li>
+                <li class="locked"><img src="img/emots/fire.png" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -16" result="goo" />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </defs>
+        </svg>
+
+        <div class="slidecontainer">
+          <div class="start">0</div>
+          <div class="end">20</div>
+          <input type="range" min="0" max="20" class="slider" id="myRange">
+        </div>             
+
+
+        <div class="btn-action-group">
+          <p><a href="#" class="btn btn-blue submitRate">SUBMIT RATE</a></p>
+          <p><a href="#" class="btn btn-grey passProfil">Pass this profile</a></p>
+        </div>
+
+      </div>
+    </section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="velocity.min.js"></script>
+  <script type="text/javascript" src="cloudinary-jquery.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+
+  <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '297650164114693',
+          // appId      : '2031953333692009',
+          status: true,
+          xfbml: true,
+          oauth: true,
+          version    : 'v3.1'
+        });
+          
+        // FB.AppEvents.logPageView();  
+
+        console.log('FB INIT');
+        APPlaunch();
+          
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    
+
+</body>
+</html>
